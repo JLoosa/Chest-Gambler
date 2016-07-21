@@ -1,6 +1,6 @@
 main: me.jrl1004.java.chestgambler.ChestGambler
 name: ChestGambler
-version: 1.0.0
+version: 1.0.1
 depend: [Vault]
 commands:
   chestgambler:

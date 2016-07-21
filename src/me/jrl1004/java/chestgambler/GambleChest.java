@@ -14,11 +14,11 @@ import org.bukkit.util.Vector;
 
 public class GambleChest {
 
-	private Chest chest;
-	private World world;
-	private Vector vec;
-	private int cost;
-	private int totalItems;
+	private Chest	chest;
+	private World	world;
+	private Vector	vec;
+	private int		cost;
+	private int		totalItems;
 
 	public GambleChest(Chest chest, int price) {
 		this.chest = chest;
@@ -108,10 +108,9 @@ public class GambleChest {
 		ItemStack stack = getRandomItem();
 		messageColored(player, "You won a(n) " + (stack.getItemMeta().getDisplayName() == null ? stack.getType().toString() : stack.getItemMeta().getDisplayName()));
 		player.getInventory().setItem(ff, stack);
-		player.updateInventory();
 	}
 
-	private String prefix = ChatColor.GREEN + "ChestGambler > " + ChatColor.AQUA;
+	private String	prefix	= ChatColor.GREEN + "ChestGambler > " + ChatColor.AQUA;
 
 	private void messageColored(CommandSender sender, String... messages) {
 		if (sender == null) return;

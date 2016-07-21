@@ -30,7 +30,7 @@ public class GambleCommand implements CommandExecutor {
 			messageColored(player, "You do not have permission to do this");
 			return true;
 		}
-		ItemStack stack = player.getItemInHand();
+		ItemStack stack = player.getInventory().getItemInMainHand();
 		if (stack == null || stack.getType() != Material.CHEST) {
 			messageColored(player, "Please hold the chest you would like to use");
 			return true;
@@ -58,7 +58,7 @@ public class GambleCommand implements CommandExecutor {
 				lore.remove("Gambling Chest");
 			m.setLore(lore);
 			stack.setItemMeta(m);
-			player.setItemInHand(stack);
+			player.getInventory().setItemInMainHand(stack);
 			messageColored(player, "Held block reset");
 		}
 		return true;
